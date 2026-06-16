@@ -36,12 +36,14 @@ function Home() {
 
             <div className="row">
 
-                {pizzas.map((pizza) => (
+                {pizzas
+                    .filter(pizza => pizza.IsAvailable)
+                    .map((pizza) => (
                     <div className="col-md-4 mb-3" key={pizza.id}>
                         <div className="card p-3">
 
                             <h4>{pizza.name}</h4>
-                            <img src={pizza.image} alt={pizza.name} className="img-fluid mb-3"/>
+                            <img src={pizza.picture} alt={pizza.name} className="img-fluid mb-3"/>
                             <h6>{pizza.description}</h6>
                             <p>{pizza.price} грн</p>
 
