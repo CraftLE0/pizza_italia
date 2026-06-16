@@ -37,7 +37,7 @@ function Home() {
             <div className="row">
 
                 {pizzas
-                    .filter(pizza => pizza.IsAvailable)
+                    .filter(pizza => pizza.isAvailable)
                     .map((pizza) => (
                     <div className="col-md-4 mb-3" key={pizza.id}>
                         <div className="card p-3">
